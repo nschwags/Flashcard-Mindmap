@@ -1,0 +1,106 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff; /* White text */
+  font-family: "Arial", sans-serif; /* You can choose another font */
+  height: 5vh;
+  border-bottom: #2c302f 1px solid;
+  background-color: #b5c9bd;
+}
+
+#navbar_logo {
+  height: 100%; /* Adjust to your logo size */
+  width: auto;
+}
+
+#navbar_logo img {
+  margin-left: 10px;
+  height: 100%;
+  width: auto;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: space-around;
+  gap: 2vw;
+}
+
+.navlinks a {
+  color: #2c302f;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+.navlinks a.active {
+  color: #fff;
+  background-color: #74a69a;
+  border-radius: 10px;
+}
+
+.navlinks a:not(.active):hover {
+  color: #fff;
+  background-color: #74a69a;
+  border-radius: 10px;
+}
+
+.toggle_nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .open {
+    display: flex;
+  }
+
+  #navbar_logo img {
+    margin-left: 0;
+    height: 10vh;
+  }
+
+  #navbar_logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .toggle_nav {
+    display: block;
+    cursor: pointer;
+    color: #2c302f;
+  }
+
+  #navicon {
+    font-size: 30px;
+  }
+}
+
+/* Adjust Navbar for Mobile Devices */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  #navbar_logo img {
+    margin-left: 0;
+    height: 40px;
+  }
+
+  #navicon {
+    font-size: 18px;
+  }
+}
